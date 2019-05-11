@@ -1,5 +1,5 @@
 # silvia-pi
-A Raspberry Pi modification to the Rancilio Silvia Espresso Machine implementing PID temperature control.
+A Raspberry Pi modification to the Rancilio Silvia Espresso Machine implementing PID temperature control, and automated brewing cycles.
 
 #### Currently Implemented Features:
 * Brew temperature control
@@ -8,57 +8,58 @@ A Raspberry Pi modification to the Rancilio Silvia Espresso Machine implementing
 * Programmable machine warm-up/wake-up
 
 #### Planned Features:
-* Steam temperature control
-* Timed shots with pre-infusion
-* Digital pressure gauge
+* remote control of brew and steam switch
+* automated start and warmup
+* shot prep for next day
+* automated maintenance
+* external enclosure
+* new webinterface served via flask
 
 #### Dashboard
 <img src="https://github.com/brycesub/silvia-pi/blob/master/media/silvia_dashboard.gif" width=800 />
 
 #### Hardware
-* Raspberry Pi 2
-  * $35 - http://www.amazon.com/Raspberry-Pi-Model-Project-Board/dp/B00T2U7R7I
-  * $5 - Raspberry Pi Zero should work too
-* Wi-Fi Adapter that works with Raspbian
-  * $10 - http://www.amazon.com/Edimax-EW-7811Un-150Mbps-Raspberry-Supports/dp/B003MTTJOY or
-  * $10 - http://www.amazon.com/Tenda-150Mbps-Wireless-Adapter-W311MI/dp/B006GCYAOI
+* Raspberry Pi zero w
+  * $17.74 - https://www.aliexpress.com/item/2017-Raspberry-Pi-Zero-W-Board-1GHz-CPU-512MB-RAM-with-WIFI-Bluetooth-RPI-0-W
+
 * Power Adapter
   * Any Micro USB 5v / 2A supply will do, the longer the cable the better
-  * $9 - http://www.amazon.com/CanaKit-Raspberry-Supply-Adapter-Charger/dp/B00GF9T3I0
+  * $2.88 https://www.aliexpress.com/item/AC-110V-220V-TO-DC-5V-12V-24V-1A-2A-3A-5A-10A-15A-20A-30A/32836806697.html
 * Micro SD Card
   * 4GB minimum, 8GB Class 10 recommended
-  * $7 - http://www.amazon.com/Samsung-Class-Adapter-MB-MP16DA-AM/dp/B00IVPU7KE
+  * $4.75 - https://www.aliexpress.com/item/SAMSUNG-32G-64G-128G-Memory-Card-Micro-SD-SDHC-SDXC-TF80M-Grade-EVO-Class-10-Micro/32610125064.html
+* 4 channel 5v relay module
+  * $ 4.10 https://www.aliexpress.com/item/DC5V-1-2-4-8-Channel-Relay-Module-with-Optocoupler-Relay-Output-1-2-4-8/32888878613.html
 * Solid State Relay - For switching on and off the heating element
-  * $10 - https://www.sparkfun.com/products/13015
+  * $3.4 - https://www.aliexpress.com/item/1pcs-SSR-40DA-40A-Solid-State-Relay-Module-3-32V-DC-Input-24-380VAC/32681597174.html?spm=a2g0s.9042311.0.0.27424c4d5PrdXp
 * Thermocouple Amplifier - For interfacing between the Raspberry Pi and Thermocouple temperature probe
-  * $15 - https://www.sparkfun.com/products/13266
+  * $2.35 - https://www.aliexpress.com/item/MAX31855K-Thermocouple-Sensor-Temperature-Detection-Module-Development-Board-Hot-sale/32805699868.html?spm=a2g0s.9042311.0.0.27424c4doR8tzF
 * Type K Thermocouple - For accurate temperature measurement
-  * $15 - http://www.auberins.com/index.php?main_page=product_info&cPath=20_3&products_id=307
-* Ribbon Cable - For connecting everything together
-  * $7 - http://www.amazon.com/Veewon-Flexible-Multicolored-Female-Breadboard/dp/B00N7XX4XM
-    * Female to Female if using the Raspberry Pi 2
-  * $5 - http://www.amazon.com/uxcell-Width-Colorful-Flexible-Ribbon/dp/B00BWFY6JI
-    * Bare wire if using the Raspberry Pi Zero
-* 14 gauge wire - For connecting the A/C side of the relay to the circuit
+  * $0.85 - https://www.aliexpress.com/item/Ring-type-Probe-Thermocouple-K-Temperature-Sensor-2M-Cable-for-Industrial-Temperature-Controller/32749486833.html
+* female to female dupont line for connecting everything- 
+  * $0.65 - https://www.aliexpress.com/item/40PIN-Dupont-Line-10CM-20CM-30CM-Male-to-Male-Female-to-Male-and-Female-to-Female/32960712876.html
+*  .75mm^2 wire - For connecting the A/C side of the relay to the circuit
   * $5 - Hardware Store / Scrap
     * Don't skimp here.  Remember this wire will be in close proximit to a ~240*F boiler
 
 #### Hardware Installation
 [Installation Instructions / Pictures](http://imgur.com/a/3WLVt)
+(my own version comming soon^tm)
 
 #### Circuit Diagram
 High-level circuit diagram:
 
 ![Circuit Diagram](media/circuit.png?raw=true "Circuit Diagram")
+(own version comming soon^tm)
 
 #### Software
-* OS - Raspbian Jessie
-  * Full - https://downloads.raspberrypi.org/raspbian_latest
-  * Lite (for smaller SD Cards) - https://downloads.raspberrypi.org/raspbian_lite_latest
+* OS - Raspbian https://www.raspberrypi.org/downloads/raspbian/
 
 Install Raspbian and configure Wi-Fi and timezone.
 
-#### silvia-pi Software Installation Instructions
+
+
+#### silvia-pi Software Installation Instructions, will be updated
 Execute on the pi bash shell:
 ````
 sudo apt-get -y update
