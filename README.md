@@ -30,6 +30,7 @@ A Raspberry Pi modification to the Rancilio Silvia Espresso Machine implementing
   * $4.75 - https://www.aliexpress.com/item/SAMSUNG-32G-64G-128G-Memory-Card-Micro-SD-SDHC-SDXC-TF80M-Grade-EVO-Class-10-Micro/32610125064.html
 * 4 channel 5v relay module
   * $ 4.10 https://www.aliexpress.com/item/DC5V-1-2-4-8-Channel-Relay-Module-with-Optocoupler-Relay-Output-1-2-4-8/32888878613.html
+  * $0.47 also take a 1 channel if you want to start and stop steam https://www.aliexpress.com/item/DC5V-1-2-4-8-Channel-Relay-Module-with-Optocoupler-Relay-Output-1-2-4-8/32888878613.html
 * Solid State Relay - For switching on and off the heating element
   * $3.4 - https://www.aliexpress.com/item/1pcs-SSR-40DA-40A-Solid-State-Relay-Module-3-32V-DC-Input-24-380VAC/32681597174.html?spm=a2g0s.9042311.0.0.27424c4d5PrdXp
 * Thermocouple Amplifier - For interfacing between the Raspberry Pi and Thermocouple temperature probe
