@@ -50,7 +50,7 @@ A Raspberry Pi modification to the Rancilio Silvia Espresso Machine implementing
 #### Circuit Diagram
 High-level circuit diagram:
 
-![Circuit Diagram](media/circui- drawing-silvia.png?raw=true "Circuit Diagram")
+![Circuit Diagram](media/circuit-drawing-silvia.png?raw=true "Circuit Diagram")
 (own version comming soon^tm)
 
 #### Software
