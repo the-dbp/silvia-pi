@@ -39,6 +39,8 @@ A Raspberry Pi modification to the Rancilio Silvia Espresso Machine implementing
   * $0.85 - https://www.aliexpress.com/item/Ring-type-Probe-Thermocouple-K-Temperature-Sensor-2M-Cable-for-Industrial-Temperature-Controller/32749486833.html
 * female to female dupont line for connecting everything- 
   * $0.65 - https://www.aliexpress.com/item/40PIN-Dupont-Line-10CM-20CM-30CM-Male-to-Male-Female-to-Male-and-Female-to-Female/32960712876.html
+* cable sleeve 8mm diameter
+  * $4.28 https://www.aliexpress.com/item/32875399483.html
 *  .75mm^2 wire - For connecting the A/C side of the relay to the circuit, rubber grommet and splicing connector, 3-conductor
   * $5 - Hardware Store / Scrap
     * Don't skimp here.  Remember this wire will be in close proximit to a ~240*F boiler
