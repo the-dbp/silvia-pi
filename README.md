@@ -13,6 +13,7 @@ A Raspberry Pi modification to the Rancilio Silvia Espresso Machine implementing
 * shot prep for next day
 * automated maintenance
 * external enclosure
+* celcius instead of fahrenheit
 * new webinterface served via flask
 
 #### Dashboard
