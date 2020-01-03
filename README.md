@@ -1,13 +1,9 @@
 # silvia-pi
 A Raspberry Pi modification to the Rancilio Silvia Espresso Machine implementing PID temperature control, and automated brewing cycles.
-
-#### Currently Implemented Features:
-* Brew temperature control
-* RESTful API
-* Web interface for displaying temperature and other statistics
-* Programmable machine warm-up/wake-up
-
 #### Planned Features:
+* Web interface for displaying temperature and other statistics
+* Brew temperature control
+* Programmable machine warm-up/wake-up
 * remote control of brew and steam switch
 * automated start and warmup
 * shot prep for next day
@@ -69,14 +65,13 @@ sudo apt-get -y update
 sudo apt-get -y upgrade
 sudo apt-get -y install rpi-update git build-essential python-dev python-smbus python-pip
 sudo rpi-update
-sudo bash -c 'echo "dtparam=spi=on" >> /boot/config.txt'
+~~ sudo bash -c 'echo "dtparam=spi=on" >> /boot/config.txt' ~~
 sudo reboot
 ````
 
 After the reboot:
 ````
-sudo git clone https://github.com/the-dbp/silvia-pi.git /root/silvia-pi
-sudo /root/silvia-pi/setup.sh
+~~ sudo git clone https://github.com/the-dbp/silvia-pi.git ~~
 ````
 This last step will download the necessariy python libraries and install the silvia-pi software in /root/silvia-pi
 
