@@ -1,4 +1,4 @@
-# silvia-pi
+# silvia-pi test
 A Raspberry Pi modification to the Rancilio Silvia Espresso Machine implementing PID temperature control, and automated brewing cycles.
 #### Planned Features:
 * Web interface for displaying temperature and other statistics
