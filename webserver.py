@@ -2,7 +2,7 @@ from flask import Flask
 
 app = Flask(__name__)
 
-import start_page
+from silvia_web import start_page 
 app.register_blueprint(start_page.bp)
 app.add_url_rule('/', endpoint = 'index')
 
