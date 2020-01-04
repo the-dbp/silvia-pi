@@ -1,3 +1,4 @@
+#this fork is a wip
 # silvia-pi
 A Raspberry Pi modification to the Rancilio Silvia Espresso Machine implementing PID temperature control, and automated brewing cycles.
 #### Planned Features:
@@ -59,17 +60,17 @@ Install Raspbian and configure Wi-Fi and timezone.
 
 #### silvia-pi Software Installation Instructions, will be updated
 Execute on the pi bash shell:
-''''
+```
 sudo apt-get -y update
 sudo apt-get -y install git build-essential python-dev python-smbus python-pip
 sudo bash -c 'echo "dtparam=spi=on" >> /boot/config.txt' 
 sudo reboot
-''''
+```
 
 After the reboot:
-''''
+```
 sudo git clone https://github.com/the-dbp/silvia-pi.git
 cd silvia-pi
 sudo setup.sh
-''''
+```
 This last step will make the virtual environment and download the necessariy python libraries and install the silvia-pi software in /root/silvia-pi~~
