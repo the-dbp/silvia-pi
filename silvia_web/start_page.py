@@ -4,7 +4,12 @@ from flask import (
 from RPi import GPIO
 GPIO.setmode(GPIO.BCM)
 power_gpio =14 
+steam_gpio =15
+GPIO.setup(steam_gpio,GPIO.OUT)
 GPIO.setup(power_gpio,GPIO.OUT)
+GPIO.output(power_gpio,1)
+GPIO.output(steam_gpio,1)
+
 
 bp = Blueprint('start_page', __name__)
 
@@ -14,11 +19,22 @@ def index():
 
 @bp.route('/on')
 def on():
-    GPIO.output(power_gpio,1)
+    GPIO.output(power_gpio,0)
     return redirect(url_for('index'))
 
 @bp.route('/off')
 def off():
-    GPIO.output(power_gpio,0)
+    GPIO.output(power_gpio,1)
     return redirect(url_for('index'))
+
+@bp.route('/son')
+def steam_on():
+    GPIO.output(steam_gpio,0)
+    return redirect(url_for('index'))
+
+@bp.route('/soff')
+def steam_off():
+    GPIO.output(steam_gpio,1)
+    return redirect(url_for('index'))
+
 
