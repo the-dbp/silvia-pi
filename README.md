@@ -1,4 +1,4 @@
-#this fork is a wip
+# this fork is a wip
 # silvia-pi
 A Raspberry Pi modification to the Rancilio Silvia Espresso Machine implementing PID temperature control, and automated brewing cycles.
 #### Planned Features:
