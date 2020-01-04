@@ -7,7 +7,7 @@ if [[ $(whoami) -ne 'root' ]]; then
   exit -1
 fi
 
-echo "Creating virtual environment"
+echo "Creating virtual environment..."
 python3 -m venv venv
 . venv/bin/activate
 
