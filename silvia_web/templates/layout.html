@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% if title %}
+        <title>{{title}}</title>
+    {% else %}
+        <title>silvia-pi</title>
+    {% endif %}
+
+    {% if stylesheet %}
+        <link rel="stylesheet" href="{{stylesheet}}">
+    {% else %}
+        <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.css')}}?q=5">
+    {% endif %}
+    <script type=text/javascript src="{{url_for('static', filename='js/jquery.js')}}"></script>
+
+
+
+</head>
+<body>
+    <header>
+    </header>
+    <div class="main">
+        {% block content %}{% endblock%}
+    </div>
+</body>
+
+</html>
