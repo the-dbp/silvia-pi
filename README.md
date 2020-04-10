@@ -13,7 +13,8 @@ A Raspberry Pi modification to the Rancilio Silvia Espresso Machine implementing
 * new webinterface served via flask
 
 #### Dashboard
-<img src="https://github.com/brycesub/silvia-pi/blob/master/media/silvia_dashboard.gif" width=800 />
+
+pictures coming soon
 
 #### Hardware
 * Raspberry Pi zero w
@@ -34,6 +35,8 @@ A Raspberry Pi modification to the Rancilio Silvia Espresso Machine implementing
   * $2.35 - https://www.aliexpress.com/item/MAX31855K-Thermocouple-Sensor-Temperature-Detection-Module-Development-Board-Hot-sale/32805699868.html?spm=a2g0s.9042311.0.0.27424c4doR8tzF
 * Type K Thermocouple - For accurate temperature measurement
   * $0.85 - https://www.aliexpress.com/item/Ring-type-Probe-Thermocouple-K-Temperature-Sensor-2M-Cable-for-Industrial-Temperature-Controller/32749486833.html
+* thermal tape, for avoiding grounding the thermocouple
+* $1.33 https://www.aliexpress.com/item/32833827745.html
 * female to female dupont line for connecting everything- 
   * $0.65 - https://www.aliexpress.com/item/40PIN-Dupont-Line-10CM-20CM-30CM-Male-to-Male-Female-to-Male-and-Female-to-Female/32960712876.html
 * cable sleeve 8mm diameter
@@ -59,7 +62,7 @@ Install Raspbian and configure Wi-Fi and timezone.
 
 
 #### silvia-pi Software Installation Instructions, will be updated
-~~Execute on the pi bash shell:
+Execute on the pi bash shell:
 sudo apt-get -y update
 sudo apt-get -y upgrade
 sudo apt-get -y install rpi-update git build-essential python-dev python-smbus python-pip
@@ -67,57 +70,8 @@ sudo rpi-update
  sudo bash -c 'echo "dtparam=spi=on" >> /boot/config.txt' 
 sudo reboot~~
 
-~~After the reboot:
+After the reboot:
 sudo git clone https://github.com/the-dbp/silvia-pi.git
-This last step will download the necessariy python libraries and install the silvia-pi software in /root/silvia-pi~~
-
-It also creates an entry in /etc/rc.local to start the software on every boot.
-
-#### API Documentation
-
-##### GET /allstats
-Returns JSON of all the following statistics:
-* i : Current loop iterator value (increases 10x per second)
-* tempf : Temperature in °F
-* avgtemp : Average temperature over the last 10 cycles (1 second) in °F
-* settemp : Current set (goal) temperature in °F
-* iscold : True if the temp was <120°F in the last 15 minutes
-* hestat : 0 if heating element is currently off, 1 if heating element is currently on
-* pidval : PID output from the last cycle
-* avgpid : Average PID output over the last 10 cycles (1 second)
-* pterm : PID P Term value (Proportional error)
-* iterm : PID I Term value (Integral error)
-* dterm : PID D Term value (Derivative error)
-* snooze : Current or last snooze time, a string in the format HH:MM (24 hour)
-* snoozeon : true if machine is currently snoozing, false if machine is not snoozing
-
-##### GET /curtemp
-Returns string of the current temperature in °F
-
-##### GET /settemp
-Returns string of the current set (goal) temperature in °F
-
-##### POST /settemp
-Expects one input 'settemp' with a value between 200-260.  
-Sets the set (goal) temperature in °F
-Returns the set temp back or a 400 error if unsuccessful.
-
-##### GET /snooze
-Returns string of the current or last snooze time formatted "HH:MM" (24 hour).  
-e.g. 13:00 if snoozing until 1:00 PM local time.
-
-##### POST /snooze
-Expects one input 'snooze', a string in the format "HH:MM" (24 hour).  
-This enables the snooze function, the machine will sleep until the time specified.  
-Returns the snooze time set or 400 if passed an invalid input.
-
-##### POST /resetsnooze
-Disables/cancels the current snooze functionality.  
-Returns true always.
-
-##### GET /restart
-Issues a reboot command to the Raspberry Pi.
-
-##### GET /healthcheck
-A simple healthcheck to see if the webserver thread is repsonding.  
-Returns string 'OK'.
+sudo checkout Silvia_pi_new
+sudo ./setup.sh
+remaining instruction comming soon
