@@ -1,14 +1,15 @@
 # silvia-pi
 A Raspberry Pi modification to the Rancilio Silvia Espresso Machine implementing PID temperature control, and automated brewing cycles.
+#### Implemented Features:
+* remote control of brew and steam switch
+* external enclosure
 #### Planned Features:
 * Web interface for displaying temperature and other statistics
 * Brew temperature control
 * Programmable machine warm-up/wake-up
-* remote control of brew and steam switch
 * automated start and warmup
 * shot prep for next day
 * automated maintenance
-* external enclosure
 * celcius instead of fahrenheit
 * new webinterface served via flask
 
@@ -43,7 +44,7 @@ pictures coming soon
   * $4.28 https://www.aliexpress.com/item/32875399483.html
 *  .75mm^2 wire - For connecting the A/C side of the relay to the circuit, rubber grommet and splicing connector, 3-conductor
   * $5 - Hardware Store / Scrap
-    * Don't skimp here.  Remember this wire will be in close proximit to a ~240*F boiler
+    * Don't skimp here.  Remember this wire will be in close proximit to a ~120C boiler
 
 #### Hardware Installation
 [Installation Instructions / Pictures](http://imgur.com/a/3WLVt)
