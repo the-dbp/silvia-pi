@@ -33,7 +33,7 @@ pictures coming soon
 * Solid State Relay - For switching on and off the heating element
   * $3.4 - https://www.aliexpress.com/item/1pcs-SSR-40DA-40A-Solid-State-Relay-Module-3-32V-DC-Input-24-380VAC/32681597174.html?spm=a2g0s.9042311.0.0.27424c4d5PrdXp
 * Thermocouple Amplifier - For interfacing between the Raspberry Pi and Thermocouple temperature probe
-  * $2.35 - https://www.aliexpress.com/item/MAX31855K-Thermocouple-Sensor-Temperature-Detection-Module-Development-Board-Hot-sale/32805699868.html?spm=a2g0s.9042311.0.0.27424c4doR8tzF
+  * $10.06 - https://www.banggood.com/MAX31855-K-Type-Thermocouple-Board-Temperature-Measurement-Sensor-Module-p-1086523.html?rmmds=myorder&cur_warehouse=CN
 * Type K Thermocouple - For accurate temperature measurement
   * $0.85 - https://www.aliexpress.com/item/Ring-type-Probe-Thermocouple-K-Temperature-Sensor-2M-Cable-for-Industrial-Temperature-Controller/32749486833.html
 * thermal tape, for avoiding grounding the thermocouple
