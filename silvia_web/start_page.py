@@ -1,7 +1,7 @@
 from flask import (
     Blueprint, redirect, render_template, request, url_for
 )
-import time
+
 from RPi import GPIO
 GPIO.setmode(GPIO.BCM)
 power_gpio =14 
@@ -41,19 +41,12 @@ def steam_off():
     GPIO.output(steam_gpio,0)
     return redirect(url_for('index'))
 
+import subprocess
+
 @bp.route('/maint')
-def maintentance():
-    for i in range(10):
-        GPIO.output(brew_gpio,0)
-        time.sleep(5)
-        GPIO.output(brew_gpio,1)
-        time.sleep(10)
-    for i in range(2):
-        GPIO.output(brew_gpio,0)
-        time.sleep(1)
-        GPIO.output(brew_gpio,1)
-        time.sleep(1)
-
+def maintenance():
+    try:
+        subprocess.Popen(["python", "maintenance_task.py"])  # Runs in the background
+    except Exception as e:
+        print(f"Error starting subprocess: {e}")
     return redirect(url_for('index'))
-
-    
