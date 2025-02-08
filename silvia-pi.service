@@ -1,0 +1,15 @@
+[Unit]
+Description= Remote controll and automation of silvia 
+After=syslog.target network.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/silvia-pi
+ExecStart=/usr/bin/sudo /usr/bin/python3 -u -m webserver 
+Restart=always
+StartLimitInterval=60s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
