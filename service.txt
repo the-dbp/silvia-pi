@@ -1,0 +1,2 @@
+sudo cp silvia-pi.service /etc/systemd/system/silvia-pi.service
+sudo systemctl enable silvia-pi.service --now
