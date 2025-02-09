@@ -1,0 +1,15 @@
+[Unit]
+Description=Temperature Logging Service
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/silvia-pi
+ExecStart=/usr/bin/python3 -u io/run_temp_log.py
+Restart=always
+StartLimitInterval=60s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

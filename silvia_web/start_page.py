@@ -42,11 +42,13 @@ def steam_off():
     return redirect(url_for('index'))
 
 import subprocess
+import os
 
 @bp.route('/maint')
 def maintenance():
+    script_path = os.path.join(os.path.dirname(__file__), "../io/maintenance_task.py")
     try:
-        subprocess.Popen(["python", "maintenance_task.py"])  # Runs in the background
+        subprocess.Popen(["python", script_path])  # Run script in the background
     except Exception as e:
         print(f"Error starting subprocess: {e}")
     return redirect(url_for('index'))
